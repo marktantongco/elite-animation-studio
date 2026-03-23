@@ -1,0 +1,470 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   BRUTALIST-MODERN DESIGN SYSTEM
+   Elite UI/UX Designer & Animation Engineer
+   ============================================ */
+
+@theme inline {
+  /* Core Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Brutalist Palette */
+  --color-brutal-yellow: #FFEA00;
+  --color-brutal-black: #000000;
+  --color-brutal-red: #FF3B30;
+  --color-brutal-white: #F5F5F5;
+  --color-brutal-surface: #1A1A1A;
+  --color-brutal-gray: #8A8A8A;
+  
+  /* Component Colors */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0rem; /* Brutalist = No radius */
+  
+  /* Light Mode - Brutalist */
+  --background: #F5F5F5;
+  --foreground: #000000;
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+  --primary: #FFEA00;
+  --primary-foreground: #000000;
+  --secondary: #000000;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E5E5E5;
+  --muted-foreground: #8A8A8A;
+  --accent: #FFEA00;
+  --accent-foreground: #000000;
+  --destructive: #FF3B30;
+  --border: #000000;
+  --input: #000000;
+  --ring: #FFEA00;
+  --chart-1: #FFEA00;
+  --chart-2: #000000;
+  --chart-3: #FF3B30;
+  --chart-4: #1A1A1A;
+  --chart-5: #8A8A8A;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #FFEA00;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #000000;
+  --sidebar-ring: #FFEA00;
+  
+  /* Typography Scale */
+  --font-display: clamp(3rem, 8vw, 6rem);
+  --font-h1: clamp(2.5rem, 6vw, 4.5rem);
+  --font-h2: clamp(2rem, 4vw, 3rem);
+  --font-h3: clamp(1.5rem, 3vw, 2rem);
+  --font-body: clamp(1rem, 2vw, 1.125rem);
+  --font-caption: clamp(0.75rem, 1.5vw, 0.875rem);
+  
+  /* Spacing System (8px base) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+  --space-2xl: 9rem;
+  
+  /* Brutalist Borders */
+  --border-thin: 2px;
+  --border-thick: 4px;
+  --border-brutal: 6px;
+  
+  /* Hard Shadows */
+  --shadow-brutal-sm: 4px 4px 0px #000000;
+  --shadow-brutal-md: 8px 8px 0px #000000;
+  --shadow-brutal-lg: 12px 12px 0px #000000;
+  --shadow-brutal-yellow: 8px 8px 0px #FFEA00;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #F5F5F5;
+  --card: #1A1A1A;
+  --card-foreground: #F5F5F5;
+  --popover: #1A1A1A;
+  --popover-foreground: #F5F5F5;
+  --primary: #FFEA00;
+  --primary-foreground: #000000;
+  --secondary: #F5F5F5;
+  --secondary-foreground: #000000;
+  --muted: #2A2A2A;
+  --muted-foreground: #8A8A8A;
+  --accent: #FFEA00;
+  --accent-foreground: #000000;
+  --destructive: #FF3B30;
+  --border: #FFEA00;
+  --input: #FFEA00;
+  --ring: #FFEA00;
+  --chart-1: #FFEA00;
+  --chart-2: #F5F5F5;
+  --chart-3: #FF3B30;
+  --chart-4: #8A8A8A;
+  --chart-5: #4A4A4A;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-primary: #FFEA00;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #F5F5F5;
+  --sidebar-border: #FFEA00;
+  --sidebar-ring: #FFEA00;
+  
+  /* Dark mode shadows */
+  --shadow-brutal-sm: 4px 4px 0px #FFEA00;
+  --shadow-brutal-md: 8px 8px 0px #FFEA00;
+  --shadow-brutal-lg: 12px 12px 0px #FFEA00;
+  --shadow-brutal-yellow: 8px 8px 0px #F5F5F5;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Selection */
+  ::selection {
+    background: #FFEA00;
+    color: #000000;
+  }
+}
+
+/* ============================================
+   BRUTALIST UTILITY CLASSES
+   ============================================ */
+
+@layer utilities {
+  /* Hard Shadow Utilities */
+  .shadow-brutal-sm {
+    box-shadow: var(--shadow-brutal-sm);
+  }
+  
+  .shadow-brutal-md {
+    box-shadow: var(--shadow-brutal-md);
+  }
+  
+  .shadow-brutal-lg {
+    box-shadow: var(--shadow-brutal-lg);
+  }
+  
+  .shadow-brutal-yellow {
+    box-shadow: var(--shadow-brutal-yellow);
+  }
+  
+  /* Brutal Border Utilities */
+  .border-brutal {
+    border-width: var(--border-brutal);
+    border-color: var(--border);
+  }
+  
+  .border-brutal-thick {
+    border-width: var(--border-thick);
+    border-color: var(--border);
+  }
+  
+  /* Typography */
+  .font-display {
+    font-size: var(--font-display);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 900;
+  }
+  
+  .font-h1 {
+    font-size: var(--font-h1);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    font-weight: 800;
+  }
+  
+  .font-h2 {
+    font-size: var(--font-h2);
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+  
+  .font-h3 {
+    font-size: var(--font-h3);
+    line-height: 1.3;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  
+  .font-body {
+    font-size: var(--font-body);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+  
+  .font-caption {
+    font-size: var(--font-caption);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Text Effects */
+  .text-stroke {
+    -webkit-text-stroke: 2px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-stroke-thick {
+    -webkit-text-stroke: 4px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Aspect Ratios */
+  .aspect-brutal {
+    aspect-ratio: 4/3;
+  }
+  
+  .aspect-cinematic {
+    aspect-ratio: 21/9;
+  }
+}
+
+/* ============================================
+   GSAP ANIMATION UTILITIES
+   ============================================ */
+
+@layer utilities {
+  /* GPU Acceleration */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  /* Backface Visibility */
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  /* Transform Style */
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+  
+  /* Perspective */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+}
+
+/* ============================================
+   CUSTOM CURSOR STYLES
+   ============================================ */
+
+.cursor-none * {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .parallax-element {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 9999;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: #FFEA00;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* ============================================
+   BRUTALIST CARD COMPONENT
+   ============================================ */
+
+.brutal-card {
+  background: var(--card);
+  border: var(--border-thick) solid var(--border);
+  box-shadow: var(--shadow-brutal-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutal-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--border);
+}
+
+/* ============================================
+   MAGNETIC BUTTON BASE
+   ============================================ */
+
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: var(--border-thick) solid var(--border);
+  box-shadow: var(--shadow-brutal-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.magnetic-btn:hover {
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.magnetic-btn:active {
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+.section-full {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-pinned {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-left: 2px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* ============================================
+   NOISE TEXTURE OVERLAY
+   ============================================ */
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
