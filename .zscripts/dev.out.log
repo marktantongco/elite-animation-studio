@@ -322,3 +322,23 @@ Mini-services startup completed. Started 0 service(s).
 
 Next.js dev server is running in background (PID: 696).
 Use 'kill 696' to stop it.
+==========================================
+[2026-03-23 07:03:38] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.09ms] ".env"
+bun install v1.3.10 (30e609e0)
+
+Checked 1074 installs across 1189 packages (no changes) [71.00ms]
+==========================================
+[2026-03-23 07:03:39] Completed: bun install
+[LOG] Step: bun install | Duration: 1s
+==========================================
+
+==========================================
+[2026-03-23 07:03:39] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Failed to load config file "/home/z/my-project" as a TypeScript/JavaScript module. Error: Error: ENOTDIR: not a directory, lstat '/home/z/my-project/.config/prisma'
+error: script "db:push" exited with code 1
