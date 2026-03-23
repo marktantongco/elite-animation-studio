@@ -6,7 +6,7 @@ import { useGSAP, gsap } from '@/hooks/useGSAP';
 interface CustomCursorProps {
   size?: number;
   color?: string;
-  mixBlendMode?: string;
+  mixBlendMode?: React.CSSProperties['mixBlendMode'];
   showDefault?: boolean;
 }
 
