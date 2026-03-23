@@ -14,24 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Elite Animation Studio - Cinematic Web Experiences with GSAP",
+  description: "High-performance web animations with GSAP 3.14+. Brutalist-modern UI/UX design with scroll-driven narratives, micro-interactions, and 60fps guaranteed.",
+  keywords: ["GSAP", "Next.js", "TypeScript", "Animation", "Motion Design", "ScrollTrigger", "Brutalist Design", "React", "Web Animation"],
+  authors: [{ name: "Elite Animation Studio" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/logo.svg",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Elite Animation Studio",
+    description: "Cinematic web experiences with GSAP - Brutalist-Modern UI/UX",
+    url: "https://marktantongco.github.io/elite-animation-studio",
+    siteName: "Elite Animation Studio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Elite Animation Studio",
+    description: "Cinematic web experiences with GSAP - 60fps guaranteed",
   },
 };
 
